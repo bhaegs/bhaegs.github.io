@@ -1,0 +1,236 @@
+:root {
+    --primary-color: #302AE6;
+    --secondary-color: #536390;
+    --font-color: #0a244d;
+    --bg-color: rgb(250, 250, 250);
+    --heading-color: #292922;
+}
+
+[data-theme="dark"] {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: #f1faee;
+    --bg-color: #1d3557;
+    --heading-color: #818cab;
+}
+
+@media (prefers-color-scheme: dark), only screen and (max-width: 760px) {
+    .rps {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+      }
+    #rock, #paper, #scissors {
+        width: 8.5em;
+        height: 8.5em;
+    }
+    #copyright {
+        display: block;
+        text-align: center;
+        font-size: 0.41rem;
+        color: #e2e2e2;
+     }
+     .content {
+         font-size: 60%;
+     }
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+.main {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* DARK MODE TOGGLE */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 0 0;
+}
+
+.theme-switch-wrapper,em {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Main Content */
+h1 {
+    color: var(--font-color);
+    font-size: 4em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+a {
+    color: var(--primary-color);
+}
+
+.content {
+    display: block;
+    text-align: center;
+}
+
+#scoreBoard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+}
+
+#playerScore, #computerScore {
+    display: flex;
+    margin: 0 15px 0 15px;
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 2em;
+    background-color: var(--bg-color);
+    text-align: center;
+    border: 2px solid var(--secondary-color);
+    border-radius: 0;
+    width: 50%;
+    height: 100px;
+}
+
+
+/* ROCK PAPER SCISSORS IMAGES */
+.rps {
+    display: flex;
+    justify-content: space-around;
+    padding: 5% 10% 0 10%;
+    max-width: 80% auto;
+    max-height: 80% auto;
+    padding-top: 50px;
+    margin-top: 0;
+    margin-bottom: 75px;
+}
+
+#rock, #paper, #scissors {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    border: none;
+    padding: 15px 40px;
+    cursor: pointer;
+}
+
+#replay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+}
+
+.button {
+    border-radius: 4px;
+    background-color: var(--secondary-color);
+    border: none;
+    color: #f1faee;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    margin-top: 5px;
+  }
+
+@media only screen and (max-width: 1041px) {
+    #result {
+        font-size: 60%;
+    }
+}
+
+
+/* FOOTER */
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: var(--primary-color);
+    text-align: center;
+    background-color: #ccc;
+}
+ #copyright {
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #313131;
+    margin: 10px 15px 10px 15px;
+ }
