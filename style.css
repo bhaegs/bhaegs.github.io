@@ -16,16 +16,33 @@
 
 @media (prefers-color-scheme: dark), only screen and (max-width: 760px) {
     .rps {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
       }
+
+    /*     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0; */
+
     #rock, #paper, #scissors {
-        width: 8.5em;
-        height: 8.5em;
+    margin: 0 1.66% 60px;
+    padding: 10px;
+    text-align: center;
+    width: 20%;
     }
+
+    /*     background: #ccc;
+    list-style: none;
+    margin: 0 1.66% 60px;
+    padding: 30px;
+    text-align: center;
+    width: 30%; */
+
     #copyright {
         display: block;
         text-align: center;
@@ -33,7 +50,7 @@
         color: #e2e2e2;
      }
      .content {
-         font-size: 60%;
+         font-size: 50%;
      }
 }
 
