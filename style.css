@@ -16,11 +16,11 @@
 
 @media (prefers-color-scheme: dark), only screen and (max-width: 760px) {
     .rps {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
       }
 
     /*     display: flex;
@@ -30,10 +30,10 @@
     padding: 0; */
 
     #rock, #paper, #scissors {
-    margin: 0 1.66% 60px;
-    padding: 10px;
-    text-align: center;
-    width: 20%;
+        margin: 0 1.66% 60px;
+        padding: 10px;
+        text-align: center;
+        width: 20%;
     }
 
     /*     background: #ccc;
@@ -52,6 +52,22 @@
      .content {
          font-size: 50%;
      }
+
+     #replay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        cursor: pointer;
+    }
+
+     .button {
+        margin-top: 0;
+        padding: 0;
+        width: 200px;
+        transition: all 0.5s;
+      }
+     
 }
 
 @media only screen and (max-width: 1041px) {
@@ -191,7 +207,7 @@ a {
     max-height: 80% auto;
     padding-top: 50px;
     margin-top: 0;
-    margin-bottom: 75px;
+    margin-bottom: 0;
 }
 
 #rock, #paper, #scissors {
@@ -200,7 +216,7 @@ a {
     -moz-user-drag: none;
     -o-user-drag: none;
     border: none;
-    padding: 15px 40px;
+    padding: 15px 40px 0 40px;
     cursor: pointer;
 }
 
@@ -208,7 +224,7 @@ a {
 #replay {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     margin: auto;
     cursor: pointer;
 }
