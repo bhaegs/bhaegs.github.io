@@ -14,12 +14,13 @@
     --heading-color: #818cab;
 }
 
-@media (prefers-color-scheme: dark), only screen and (max-width: 760px) {
+@media (prefers-color-scheme: dark), only screen and (max-width: 760px), (max-height: 838px) {
     .rps {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin: 0;
+        align-items: center;
+        margin-bottom: 10px;
         padding: 0;
       }
 
@@ -30,10 +31,13 @@
     padding: 0; */
 
     #rock, #paper, #scissors {
-        margin: 0 1.66% 60px;
-        padding: 10px;
+        display: flex;
+        justify-content: center;
         text-align: center;
-        width: 20%;
+        margin: 0;
+        padding: 0;
+        width: 25%;
+        
     }
 
     /*     background: #ccc;
@@ -43,21 +47,11 @@
     text-align: center;
     width: 30%; */
 
-    #copyright {
-        display: block;
-        text-align: center;
-        font-size: 0.41rem;
-        color: #e2e2e2;
-     }
-     .content {
-         font-size: 50%;
-     }
-
-     #replay {
+    #replay {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0;
+        margin: 0px;
         cursor: pointer;
     }
 
@@ -67,7 +61,15 @@
         width: 200px;
         transition: all 0.5s;
       }
-     
+    #copyright {
+        display: block;
+        text-align: center;
+        font-size: 0.41rem;
+        color: #e2e2e2;
+     }
+     .content {
+         font-size: 50%;
+     }     
 }
 
 @media only screen and (max-width: 1041px) {
@@ -202,10 +204,10 @@ a {
 .rps {
     display: flex;
     justify-content: space-around;
-    padding: 5% 10% 0 10%;
+    padding-top: 5%;
     max-width: 80% auto;
     max-height: 80% auto;
-    padding-top: 50px;
+    padding-top: 30px;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -216,7 +218,7 @@ a {
     -moz-user-drag: none;
     -o-user-drag: none;
     border: none;
-    padding: 15px 40px 0 40px;
+    padding: 15px 15px 20px 15px;
     cursor: pointer;
 }
 
@@ -224,10 +226,21 @@ a {
 #replay {
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     margin: auto;
     cursor: pointer;
 }
+
+    /* position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; */
 
 .button {
     border-radius: 4px;
@@ -249,7 +262,7 @@ a {
     left: 0;
     bottom: 0;
     width: 100%;
-    color: var(--primary-color);
+    color: var(--font-color);
     text-align: center;
     background-color: #ccc;
 }
